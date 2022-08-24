@@ -77,7 +77,7 @@ export default function App() {
           <>
             <ArticleForm
               postArticle={postArticle}
-              currentArticle={/* currentArticlId */}
+              currentArticle={articles.find()}
             />
             <Articles
               articles={articles}
