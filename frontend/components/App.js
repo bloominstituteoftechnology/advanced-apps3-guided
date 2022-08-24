@@ -68,7 +68,7 @@ export default function App() {
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, article)
       .then(res => {
         const updatedArticle = res.data.article
-        setArticles(articles.map(art => art.article_id === article_id ?  : ))
+        setArticles(articles.map(art => art.article_id === article_id ? updatedArticle : art))
       })
       .catch(err => {
         debugger
