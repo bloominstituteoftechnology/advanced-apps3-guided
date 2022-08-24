@@ -14,11 +14,12 @@ export default function ArticleForm(props) {
   const onSubmit = evt => {
     evt.preventDefault()
     // look at currentArticle, PUT or POST  // ??????
-    if (currentArticle) {
-      putArticle(values)
-    } else {
-      postArticle(values)
-    }
+    // if (currentArticle) {
+    //   putArticle(values)
+    // } else {
+    //   postArticle(values)
+    // }
+    const callback = currentArticle ? putArticle : 
     setValues(initialFormValues)
   }
 
