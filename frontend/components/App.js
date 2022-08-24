@@ -63,6 +63,10 @@ export default function App() {
       })
   }
 
+  const putArticle = (article) => {
+    
+  }
+
   return (
     <>
       <button id="logout" onClick={logout}>Logout</button>
