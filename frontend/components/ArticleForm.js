@@ -29,7 +29,7 @@ export default function ArticleForm(props) {
 
   return (
     <form id="form" onSubmit={onSubmit}>
-      <h2>{currentArticle ? } Article</h2>
+      <h2>{currentArticle ? 'Update' : 'Create'} Article</h2>
       <input
         maxLength={50}
         onChange={onChange}
