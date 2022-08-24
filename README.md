@@ -22,5 +22,5 @@ The following endpoints exist in this project and should be explored with Postma
 - `POST http://localhost:9000/api/login`
 - `GET http://localhost:9000/api/articles`
 - `POST http://localhost:9000/api/articles`
-- `PUT http://localhost:9000/api/articles/:id`  { topic, text, title }
+- `PUT http://localhost:9000/api/articles/:id`  { topic, text, title, article_id }
 - `DELETE http://localhost:9000/api/articles/:id`
