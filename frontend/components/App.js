@@ -11,7 +11,7 @@ const loginUrl = 'http://localhost:9000/api/login'
 
 export default function App() {
   const [articles, setArticles] = useState([])
-  const [] = useState(null)
+  const [currentArticleId, setCurrentArticleId] = useState(null)
 
   const navigate = useNavigate()
 
