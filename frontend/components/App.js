@@ -71,6 +71,7 @@ export default function App() {
         setArticles(articles.map(
           art => (art.article_id === article_id) ? updatedArticle : art
         ))
+        setCurrentArticleId(null)
       })
       .catch(err => {
         debugger
