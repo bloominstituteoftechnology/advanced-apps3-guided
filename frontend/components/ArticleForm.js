@@ -23,7 +23,7 @@ export default function ArticleForm(props) {
 
   useEffect(() => {
     if (currentArticle) {
-      setValues(currentArticle)
+      setValues(currentArticle) // if you want you can remove the article_id
     }
   }, [currentArticle])
 
