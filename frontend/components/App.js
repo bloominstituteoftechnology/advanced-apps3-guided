@@ -97,13 +97,13 @@ export default function App() {
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
             />
             {
-              spinnerOn ? 'please wait...' : 
-              <Articles
-                articles={articles}
-                getArticles={getArticles}
-                deleteArticle={deleteArticle}
-                setCurrentArticleId={setCurrentArticleId}
-              />
+              spinnerOn ? 'please wait...' :
+                <Articles
+                  articles={articles}
+                  getArticles={getArticles}
+                  deleteArticle={deleteArticle}
+                  setCurrentArticleId={setCurrentArticleId}
+                />
             }
           </>
         } />
