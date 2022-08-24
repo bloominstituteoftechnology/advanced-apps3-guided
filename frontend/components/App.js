@@ -87,6 +87,7 @@ export default function App() {
           <>
             <ArticleForm
               postArticle={postArticle}
+              putArticle={putArticle}
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
             />
             <Articles
