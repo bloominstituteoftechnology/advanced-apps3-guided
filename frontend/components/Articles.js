@@ -2,7 +2,13 @@ import React, { useEffect } from 'react'
 import { Navigate } from 'react-router-dom'
 
 export default function Articles(props) {
-  const { articles, getArticles, deleteArticle, setCurrentArticleId } = props
+  const {
+    articles,
+    getArticles,
+    deleteArticle,
+    setCurrentArticleId,
+    spinnerOn,
+  } = props
 
   if (!localStorage.getItem('token')) {
     return <Navigate to="/" />
