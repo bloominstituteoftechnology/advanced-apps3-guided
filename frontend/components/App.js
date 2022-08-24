@@ -108,6 +108,7 @@ export default function App() {
         <Route path="articles" element={
           <>
             <ArticleForm
+              spinnerOn={spinnerOn}
               postArticle={postArticle}
               putArticle={putArticle}
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
