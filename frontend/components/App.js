@@ -65,6 +65,12 @@ export default function App() {
 
   const putArticle = (article) => {
     axiosWithAuth().put(`${articlesUrl}/${article.article_id}`, article)
+      .then(res => {
+        debugger
+      })
+      .catch(err => {
+        debugger
+      })
   }
 
   return (
