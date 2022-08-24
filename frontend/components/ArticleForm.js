@@ -22,7 +22,9 @@ export default function ArticleForm(props) {
   }
 
   useEffect(() => {
-    
+    if (currentArticle) {
+      setValues(currentArticle)
+    }
   }, [currentArticle])
 
   return (
