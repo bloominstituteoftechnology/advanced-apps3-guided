@@ -21,6 +21,10 @@ export default function ArticleForm(props) {
     setValues(initialFormValues)
   }
 
+  useEffect(() => {
+    
+  }, [currentArticle])
+
   return (
     <form id="form" onSubmit={onSubmit}>
       <h2>Create Article</h2>
