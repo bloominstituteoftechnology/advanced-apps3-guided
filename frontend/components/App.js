@@ -64,7 +64,7 @@ export default function App() {
   }
 
   const putArticle = (article) => {
-    axiosWithAuth().put(//????)
+    axiosWithAuth().put()
   }
 
   return (
