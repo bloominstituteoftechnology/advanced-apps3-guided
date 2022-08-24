@@ -77,6 +77,7 @@ export default function App() {
           <>
             <ArticleForm
               postArticle={postArticle}
+              currentArticle={/* currentArticlId */}
             />
             <Articles
               articles={articles}
