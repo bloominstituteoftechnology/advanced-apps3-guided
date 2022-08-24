@@ -43,11 +43,12 @@ export default function App() {
         debugger
       })
       .finally(() => {
-        
+        setSpinnerOn(false)
       })
   }
 
   const postArticle = (article) => {
+    setSpinnerOn(true)
     axiosWithAuth().post(articlesUrl, article)
       .then(res => {
         const { article } = res.data
