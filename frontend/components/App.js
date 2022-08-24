@@ -55,10 +55,10 @@ export default function App() {
   const deleteArticle = (article_id) => {
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => {
-debugger
+        debugger
       })
       .catch(err => {
-
+        debugger
       })
   }
 
