@@ -80,6 +80,7 @@ export default function App() {
             <Articles
               articles={articles}
               getArticles={getArticles}
+              deleteArticle={deleteArticle}
             />
           </>
         } />
