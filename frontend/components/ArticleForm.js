@@ -15,7 +15,7 @@ export default function ArticleForm(props) {
     evt.preventDefault()
     // look at currentArticle, PUT or POST  // ??????
     if (currentArticle) {
-      putArticle()
+      putArticle(values)
     } else {
       postArticle(values)
     }
