@@ -52,6 +52,10 @@ export default function App() {
       })
   }
 
+  const deleteArticle = (artic) => {
+
+  }
+
   return (
     <>
       <button id="logout" onClick={logout}>Logout</button>
