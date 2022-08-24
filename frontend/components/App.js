@@ -71,6 +71,9 @@ export default function App() {
       .catch(err => {
         debugger
       })
+      .finally(() => {
+        setSpinnerOn(false)
+      })
   }
 
   const putArticle = (article) => {
@@ -86,6 +89,9 @@ export default function App() {
       })
       .catch(err => {
         debugger
+      })
+      .finally(() => {
+        setSpinnerOn(false)
       })
   }
 
