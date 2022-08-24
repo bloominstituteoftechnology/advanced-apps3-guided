@@ -55,7 +55,7 @@ export default function App() {
   const deleteArticle = (article_id) => {
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => {
-        setArticles(articles.filter(art => (art.article_id !=)))
+        setArticles(articles.filter(art => (art.article_id != article_id)))
       })
       .catch(err => {
         debugger
