@@ -6,10 +6,6 @@ export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
   const { postArticle, putArticle, currentArticle } = props
 
-  const resetForm = () => {
-    setValues(initialFormValues)
-  }
-
   const onChange = evt => {
     const { id, value } = evt.target
     setValues({ ...values, [id]: value })
@@ -18,8 +14,11 @@ export default function ArticleForm(props) {
   const onSubmit = evt => {
     evt.preventDefault()
     // look at currentArticle, PUT or POST  // ??????
-    if ()
-    postArticle(values, resetForm)
+    if (currentArticle) {
+      putArticle()
+    } else {
+      postArticle(values)
+    }
     setValues(initialFormValues)
   }
 
