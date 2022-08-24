@@ -25,7 +25,7 @@ export default function Articles(props) {
                 <p>topic: {art.topic}</p>
               </div>
               <button onClick={() => deleteArticle(art.article_id)}>delete</button>
-              <button onClick={Function.prototype}>edit</button>
+              <button onClick={setCurrentArticleId}>edit</button>
             </div>
           )
         })
