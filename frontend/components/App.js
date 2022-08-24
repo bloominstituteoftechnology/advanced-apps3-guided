@@ -53,7 +53,7 @@ export default function App() {
   }
 
   const deleteArticle = (article_id) => {
-    axios.delete()
+    axiosWithAuth().delete(`${articlesUrl}/`)
   }
 
   return (
