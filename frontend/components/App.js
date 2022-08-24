@@ -57,9 +57,13 @@ export default function App() {
       .catch(err => {
         debugger
       })
+      .finally(() => {
+        setSpinnerOn(false)
+      })
   }
 
   const deleteArticle = (article_id) => {
+    setSpinnerOn(true)
     axiosWithAuth().delete(`${articlesUrl}/${article_id}`)
       .then(res => { // eslint-disable-line
         setArticles(articles.filter(art => (art.article_id != article_id)))
@@ -70,6 +74,7 @@ export default function App() {
   }
 
   const putArticle = (article) => {
+    setSpinnerOn(true)
     const { article_id } = article
     axiosWithAuth().put(`${articlesUrl}/${article_id}`, article)
       .then(res => {
