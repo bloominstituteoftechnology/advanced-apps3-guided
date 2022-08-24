@@ -4,7 +4,7 @@ const initialFormValues = { title: '', text: '', topic: '' }
 
 export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
-  const { postArticle } = props
+  const { postArticle, currentArticle } = props
 
   const resetForm = () => {
     setValues(initialFormValues)
