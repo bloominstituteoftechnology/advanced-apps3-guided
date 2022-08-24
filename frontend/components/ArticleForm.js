@@ -17,6 +17,7 @@ export default function ArticleForm(props) {
 
   const onSubmit = evt => {
     evt.preventDefault()
+    // look at currentArticle, PUT or POST
     postArticle(values, resetForm)
     setValues(initialFormValues)
   }
