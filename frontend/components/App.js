@@ -12,7 +12,7 @@ const loginUrl = 'http://localhost:9000/api/login'
 export default function App() {
   const [articles, setArticles] = useState([])
   const [currentArticleId, setCurrentArticleId] = useState(null)
-  const [spinnerOn, setSpinnerOn] = useState(false)
+  const [spinnerOn, setSpinnerOn] = useState(true)
 
   const navigate = useNavigate()
 
