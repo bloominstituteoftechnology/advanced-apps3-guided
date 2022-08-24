@@ -52,8 +52,8 @@ export default function App() {
       })
   }
 
-  const deleteArticle = (artic) => {
-
+  const deleteArticle = (article_id) => {
+    axios.delete()
   }
 
   return (
