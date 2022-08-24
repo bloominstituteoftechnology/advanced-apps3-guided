@@ -11,8 +11,6 @@ const loginUrl = 'http://localhost:9000/api/login'
 
 export default function App() {
   const [articles, setArticles] = useState([])
-  const [error, setError] = useState('')
-  // form state here
 
   const navigate = useNavigate()
 
@@ -34,14 +32,7 @@ export default function App() {
   }
 
   const getArticles = () => {
-    // axios({
-    //   url: articlesUrl,
-    //   method: 'get',
-    //   headers: {
-    //     Authorization: localStorage.getItem('token')
-    //   },
-    // })
-    axiosWithAuth().get(articlesUrl) // this is going to send the token
+    axiosWithAuth().get(articlesUrl)
       .then(res => {
         setArticles(res.data.articles)
       })
@@ -50,21 +41,11 @@ export default function App() {
       })
   }
 
-  const postArticle = (article, success) => {
-    // axios({
-    //   url: articlesUrl,
-    //   data: article,
-    //   method: 'post',
-    //   headers: {
-    //     Authorization: localStorage.getItem('token')
-    //   },
-    // })
+  const postArticle = (article) => {
     axiosWithAuth().post(articlesUrl, article)
       .then(res => {
         const { article } = res.data
         setArticles(articles.concat(article))
-        setError('')
-        success()
       })
       .catch(err => {
         debugger
@@ -75,7 +56,6 @@ export default function App() {
     <>
       <button id="logout" onClick={logout}>Logout</button>
       <h1>Advanced Applications</h1>
-      <div>{error}</div>
       <nav>
         <NavLink id="loginScreen" to="/">Login</NavLink>
         <NavLink id="articlesScreen" to="/articles">Articles</NavLink>
@@ -84,10 +64,11 @@ export default function App() {
         <Route path="/" element={<LoginForm login={login} />} />
         <Route path="articles" element={
           <>
-            <ArticleForm postArticle={postArticle} />
+            <ArticleForm
+              postArticle={postArticle}
+            />
             <Articles
               articles={articles}
-              setError={setError}
               getArticles={getArticles}
             />
           </>
