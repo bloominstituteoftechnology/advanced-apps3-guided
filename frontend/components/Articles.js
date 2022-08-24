@@ -22,6 +22,7 @@ export default function Articles(props) {
     <div className="articles">
       <h2>Articles</h2>
       {
+        spinnerOn ? ''
         articles.map(art => {
           return (
             <div className="article" key={art.article_id}>
