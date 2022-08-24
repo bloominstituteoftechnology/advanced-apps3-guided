@@ -82,6 +82,7 @@ export default function App() {
               articles={articles}
               getArticles={getArticles}
               deleteArticle={deleteArticle}
+              setCurrentArticleId={setCurrentArticleId}
             />
           </>
         } />
