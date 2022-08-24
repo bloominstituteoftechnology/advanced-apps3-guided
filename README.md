@@ -1,4 +1,4 @@
-# Advanced Web Applications - PUT and Delete
+# Advanced Web Applications - PUT and DELETE
 
 ## Tools
 
