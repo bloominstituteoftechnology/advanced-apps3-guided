@@ -91,7 +91,10 @@ export default function App() {
         <Route path="/" element={<LoginForm login={login} />} />
         <Route path="articles" element={
           <>
-            <ArticleForm
+          {
+            spinnerOn
+              ? 'please wait'
+              :            <ArticleForm
               postArticle={postArticle}
               putArticle={putArticle}
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
@@ -102,6 +105,7 @@ export default function App() {
               deleteArticle={deleteArticle}
               setCurrentArticleId={setCurrentArticleId}
             />
+          }
           </>
         } />
       </Routes>
