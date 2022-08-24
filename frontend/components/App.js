@@ -97,7 +97,7 @@ export default function App() {
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
             />
             {
-              spinnerOn ? <div>please wait...</div> :
+              spinnerOn ? 'please wait...' :
                 <Articles
                   articles={articles}
                   getArticles={getArticles}
