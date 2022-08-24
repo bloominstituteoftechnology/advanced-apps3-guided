@@ -112,15 +112,13 @@ export default function App() {
               putArticle={putArticle}
               currentArticle={articles.find(art => (art.article_id === currentArticleId))}
             />
-            {
-              spinnerOn ? 'please wait...' :
-                <Articles
-                  articles={articles}
-                  getArticles={getArticles}
-                  deleteArticle={deleteArticle}
-                  setCurrentArticleId={setCurrentArticleId}
-                />
-            }
+            <Articles
+              articles={articles}
+              getArticles={getArticles}
+              deleteArticle={deleteArticle}
+              setCurrentArticleId={setCurrentArticleId}
+              spinnerOn={spinnerOn}
+            />
           </>
         } />
       </Routes>
