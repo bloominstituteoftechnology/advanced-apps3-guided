@@ -34,12 +34,16 @@ export default function App() {
   }
 
   const getArticles = () => {
+    setSpinnerOn(true)
     axiosWithAuth().get(articlesUrl)
       .then(res => {
         setArticles(res.data.articles)
       })
       .catch(err => {
         debugger
+      })
+      .finally(() => {
+        
       })
   }
 
