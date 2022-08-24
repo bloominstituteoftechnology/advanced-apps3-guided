@@ -54,7 +54,7 @@ export default function ArticleForm(props) {
         <option value="React">React</option>
         <option value="Node">Node</option>
       </select>
-      <button id="submitArticle">Submit</button>
+      {!spinnerOn && <button id="submitArticle">Submit</button>}
     </form>
   )
 }
