@@ -6,6 +6,10 @@ export default function ArticleForm(props) {
   const [values, setValues] = useState(initialFormValues)
   const { postArticle, currentArticle } = props
 
+  if (currentArticle) {
+    setValues(currentArticle)
+  }
+
   const resetForm = () => {
     setValues(initialFormValues)
   }
