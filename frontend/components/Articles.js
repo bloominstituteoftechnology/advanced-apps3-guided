@@ -22,20 +22,20 @@ export default function Articles(props) {
     <div className="articles">
       <h2>Articles</h2>
       {
-        spinnerOn ? ''
-        articles.map(art => {
-          return (
-            <div className="article" key={art.article_id}>
-              <div>
-                <h3>{art.title}</h3>
-                <p>{art.text}</p>
-                <p>topic: {art.topic}</p>
+        spinnerOn ? 'please wait...' :
+          articles.map(art => {
+            return (
+              <div className="article" key={art.article_id}>
+                <div>
+                  <h3>{art.title}</h3>
+                  <p>{art.text}</p>
+                  <p>topic: {art.topic}</p>
+                </div>
+                <button onClick={(evt) => deleteArticle(art.article_id)}>delete</button>
+                <button onClick={(evt) => setCurrentArticleId(art.article_id)}>edit</button>
               </div>
-              <button onClick={(evt) => deleteArticle(art.article_id)}>delete</button>
-              <button onClick={(evt) => setCurrentArticleId(art.article_id)}>edit</button>
-            </div>
-          )
-        })
+            )
+          })
       }
     </div>
   )
