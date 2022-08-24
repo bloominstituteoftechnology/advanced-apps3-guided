@@ -64,7 +64,8 @@ export default function App() {
   }
 
   const putArticle = (article) => {
-    axiosWithAuth().put(`${articlesUrl}/${article.article_id}`, article)
+    const { article_id } = article
+    axiosWithAuth().put(`${articlesUrl}/${article_id}`, article)
       .then(res => {
         const updatedArticle = res.data.article
         setArticles(articles.map(art => ))
